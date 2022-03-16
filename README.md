@@ -1,5 +1,4 @@
 # webpages-using-plain-js
-----
 A javascript interface for creating webpage which include navigation bar, logo and page banner
 
 ## Technologies Used
