@@ -1,0 +1,1 @@
+const data = 'https://sayalijoshi27.github.io/JS-Tasks/webpage-data.json'
