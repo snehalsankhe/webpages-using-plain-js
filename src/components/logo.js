@@ -5,7 +5,7 @@ export const Logo = (data) =>{
   let logoImg =  document.createElement('img');
   logoImg.src = data.imgSrc;
   logoImg.alt = data.alt;
-  logoImg.classList.add('logoImg');
+  logoImg.classList.add('logo-img');
 
   navbarBrand.appendChild(logoImg);
   return navbarBrand;
