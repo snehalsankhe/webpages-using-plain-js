@@ -1,3 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+.root{
+    height: 100%;
+}
+  
+.navigation {
+    background-color: coral;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 body{
     font-size: 18px;
+}
+
+.company-logo {
+    width: 150px;
+}
+  
+.logo {
+    width: 100%;
 }
