@@ -1,13 +1,10 @@
-import { fetchData } from  './data/data.js'
-const root = document.getElementById("root");
-const dataURL = 'https://sayalijoshi27.github.io/JS-Tasks/webpage-data.json'
+import { getData } from "./data/data.js";
+import { Navigation } from "./components/navigation.js";
 
-const renderData = async () => {
-  let response = await fetchData(dataURL)
-  console.log('----response', response)
-  return response
-
-  // root.appendChild()
+const root = document.getElementById('root')
+const renderpage = async () => {
+    let data = await getData();
+    root.appendChild(Navigation(data.navData));
 }
+renderpage();
 
-renderData();
