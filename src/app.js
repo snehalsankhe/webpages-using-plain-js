@@ -1,15 +1,13 @@
-import { fetchData } from  './data/data.js'
-import { Logo } from '../src/components/logo.js'
-const root = document.getElementById("root");
-const dataURL = 'https://sayalijoshi27.github.io/JS-Tasks/webpage-data.json'
+import { getData } from "./data/data.js";
+import { Navigation } from "./components/navigation.js";
+// import { Logo } from '../src/components/logo.js'
 
-const renderData = async () => {
-  let response = await fetchData(dataURL)
-  console.log('----response', response)
-  const { data : navData } = response;
-  // return response
-  console.log('dat----', navData)
-  root.appendChild (Logo(navData.logo))
+const root = document.getElementById('root')
+const renderpage = async () => {
+    let data = await getData();
+    console.log('---ff', data)
+    root.appendChild(Navigation(data.navData));
+    // root.appendChild (Logo(data.navData))
 }
+renderpage();
 
-renderData();
