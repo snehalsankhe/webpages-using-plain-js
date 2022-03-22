@@ -7,7 +7,6 @@ const renderpage = async () => {
     let data = await getData();
     console.log('---ff', data)
     root.appendChild(Navigation(data.navData));
-    // root.appendChild (Logo(data.navData))
 }
 renderpage();
 
