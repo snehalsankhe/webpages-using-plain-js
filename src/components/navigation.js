@@ -7,7 +7,7 @@ export const Navigation = (navData) => {
     const markUp = document.createElement("div")
     markUp.classList.add("navigation")
     markUp.appendChild(Logo(navData.logo))
-    markUp.appendChild(Hamburger())
+    markUp.appendChild(Hamburger(navData.hamburger))
     markUp.appendChild(NavLinks(navData))
     return markUp
 }

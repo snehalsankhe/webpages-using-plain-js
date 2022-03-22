@@ -1,4 +1,15 @@
-export const Hamburger = () => {
+export const Hamburger = (data) => {
+    const {
+        menuOpen: {
+            menuIcon: menuOpenIcon,
+            alt: menuIconAlt
+        },
+        close: {
+            closeIcon,
+            alt: closeIconAlt
+        }
+    } = data
+    
     const menuState = {
         isMenuOpen: false
     }
@@ -8,11 +19,13 @@ export const Hamburger = () => {
         
         let navContainer = document.querySelector('.nav-container')
         if(menuState.isMenuOpen === true) {
-            menuIcon.src = '../../images/close.png'
+            menuIcon.src = closeIcon
+            menuIcon.alt = closeIconAlt
             navContainer.classList.add('menu-open')
 
         } else {
-            menuIcon.src = '../../images/menu-black.png'
+            menuIcon.src = menuOpenIcon
+            menuIcon.alt = menuIconAlt
             navContainer.classList.remove('menu-open')
         }
     }
@@ -21,7 +34,8 @@ export const Hamburger = () => {
     hamburger.classList.add('hamburger-menu');
 
     const menuIcon = document.createElement('img')
-    menuIcon.src = '../../images/menu-black.png'
+    menuIcon.src = menuOpenIcon
+    menuIcon.alt = menuIconAlt
 
     hamburger.appendChild(menuIcon)
 
