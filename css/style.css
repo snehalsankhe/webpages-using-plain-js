@@ -10,13 +10,40 @@
   
 
 body{
-    font-size: 18px;
+  font-size: 18px;
 }
-
-.company-logo {
-    width: 150px;
+.banner-wrapper{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
 }
-  
-.logo-img {
-    width: 100%;
+.banner-wrapper h1, .banner-wrapper p{
+  color: #fff;
+  z-index: 1;
+}
+.banner-wrapper h1{
+  font-size: 40px;
+}
+.banner-wrapper p{
+  font-size: 22px;
+}
+.banner-wrapper::before{
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #171615;
+  opacity: 0.3;
+  z-index: 0;
 }
