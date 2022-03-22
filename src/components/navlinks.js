@@ -1,5 +1,3 @@
-// import { navData } from '../data/data.js'
-
 export const NavLinks = (navData) => {
     const markUp = document.createElement('ul')
     markUp.classList.add("nav-container")

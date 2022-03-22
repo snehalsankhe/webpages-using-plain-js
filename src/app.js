@@ -7,3 +7,4 @@ const renderpage = async () => {
     root.appendChild(Navigation(data.navData));
 }
 renderpage();
+

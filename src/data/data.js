@@ -9,5 +9,3 @@ export const getData = async() => {
     console.log(".............error in rendering")
   }
 };
-  
-  
