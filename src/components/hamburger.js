@@ -4,7 +4,6 @@ export const Hamburger = () => {
     }
 
     const openMenu = () => {
-        console.log('clicked', menuState.isMenuOpen)
         menuState.isMenuOpen = !menuState.isMenuOpen
         
         let navContainer = document.querySelector('.nav-container')
