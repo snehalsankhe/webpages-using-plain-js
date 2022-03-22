@@ -34,10 +34,25 @@ a:hover {
   display: flex;
   align-items: center;
 }
+.company-logo {
+    width: 150px;
+}
+img{
+    vertical-align: middle;
+    border-style: none;
+}
 .logo-img {
-  width: 250px;
-  height: 85px;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+    height: 85px;
+    object-fit: cover;
+}
+.hamburger-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 .nav-container {
   margin-left: auto;
