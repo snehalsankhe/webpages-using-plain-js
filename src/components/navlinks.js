@@ -6,7 +6,7 @@ export const NavLinks = (navData) => {
         listEle.classList.add('nav-item')
         listEle.id = link.linkId
         let anchor = document.createElement('a')
-        anchor.classList.add('nav-link')
+        link.isCta ? anchor.classList.add('nav-link','btn') : anchor.classList.add('nav-link')
         anchor.href= link.href
         anchor.text = link.title
         listEle.appendChild(anchor)
