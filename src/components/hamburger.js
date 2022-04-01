@@ -12,20 +12,19 @@ class HamburgerMenu {
         this.isMenuOpen = !this.isMenuOpen
         
         let navContainer = document.querySelector('ul')
+        let menuIcon = document.querySelector('.hamburger-menu img')
        
-        if(this.isMenuOpen === true) {
-            document.querySelector('.hamburger-menu img').src = this.menuCloseIcon
-            document.querySelector('.hamburger-menu img').alt = this.closeIconAlt
+        if (this.isMenuOpen === true) {
+            menuIcon.src = this.menuCloseIcon
+            menuIcon.alt = this.closeIconAlt
             navContainer.classList.add('menu-open')
         } else {
-            document.querySelector('.hamburger-menu img').src = this.menuOpenIcon
-            document.querySelector('.hamburger-menu img').alt = this.menuIconAlt
+            menuIcon.src = this.menuOpenIcon
+            menuIcon.alt = this.menuIconAlt
             navContainer.classList.remove('menu-open')
         }        
         
     }
-    
-    
     
     render () {
         const hamburger = document.createElement('div');
