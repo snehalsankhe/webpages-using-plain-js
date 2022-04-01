@@ -10,6 +10,7 @@ export const Navigation = (navData) => {
     const Hamburger = new HamburgerMenu(navData.hamburger)
     markUp.appendChild(Hamburger.render())
     markUp.appendChild(NavLinks(navData))
+    // markUp.appendChild(Hamburger.render())
 
     return markUp
 }

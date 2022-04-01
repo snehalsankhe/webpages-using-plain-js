@@ -8,19 +8,18 @@ class HamburgerMenu {
         this.isMenuOpen = false    
     }
 
-    openMenu = () => {
+    openMenu = (ele) => {
         this.isMenuOpen = !this.isMenuOpen
         
         let navContainer = document.querySelector('ul')
-        let menuIcon = document.querySelector('.hamburger-menu img')
        
         if (this.isMenuOpen === true) {
-            menuIcon.src = this.menuCloseIcon
-            menuIcon.alt = this.closeIconAlt
+            ele.target.src = this.menuCloseIcon
+            ele.target.alt = this.closeIconAlt
             navContainer.classList.add('menu-open')
         } else {
-            menuIcon.src = this.menuOpenIcon
-            menuIcon.alt = this.menuIconAlt
+            ele.target.src = this.menuOpenIcon
+            ele.target.alt = this.menuIconAlt
             navContainer.classList.remove('menu-open')
         }        
         
