@@ -1,0 +1,25 @@
+{
+  "name": "webpages-using-plain",
+  "version": "1.0.0",
+  "description": "A javascript interface for creating webpage which include navigation bar, logo and page banner",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snehalsankhe/webpages-using-plain-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snehalsankhe/webpages-using-plain-js/issues"
+  },
+  "homepage": "https://github.com/snehalsankhe/webpages-using-plain-js#readme"
+}

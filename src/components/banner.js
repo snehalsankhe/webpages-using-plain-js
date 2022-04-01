@@ -16,4 +16,4 @@ export const Banner = (bannerData) =>{
   bannerCode.appendChild(subTitle);
 
   return bannerCode;
-  }
+}
