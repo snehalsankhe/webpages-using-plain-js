@@ -1,45 +1,44 @@
-export const Hamburger = (data) => {
-    const {
-        menuOpen: {
-            menuIcon: menuOpenIcon,
-            alt: menuIconAlt
-        },
-        close: {
-            closeIcon,
-            alt: closeIconAlt
-        }
-    } = data
-    
-    const menuState = {
-        isMenuOpen: false
+class HamburgerMenu {
+    constructor(data) {
+        this.data = data
+        this.menuOpenIcon = this.data.menuOpen.menuIcon
+        this.menuIconAlt = this.data.menuOpen.alt
+        this.menuCloseIcon = this.data.close.closeIcon
+        this.closeIconAlt = this.data.close.alt
+        this.isMenuOpen = false    
     }
 
-    const openMenu = () => {
-        menuState.isMenuOpen = !menuState.isMenuOpen
+    openMenu = () => {
+        this.isMenuOpen = !this.isMenuOpen
         
-        let navContainer = document.querySelector('.nav-container')
-        if(menuState.isMenuOpen === true) {
-            menuIcon.src = closeIcon
-            menuIcon.alt = closeIconAlt
+        let navContainer = document.querySelector('ul')
+       
+        if(this.isMenuOpen === true) {
+            document.querySelector('.hamburger-menu img').src = this.menuCloseIcon
+            document.querySelector('.hamburger-menu img').alt = this.closeIconAlt
             navContainer.classList.add('menu-open')
-
         } else {
-            menuIcon.src = menuOpenIcon
-            menuIcon.alt = menuIconAlt
+            document.querySelector('.hamburger-menu img').src = this.menuOpenIcon
+            document.querySelector('.hamburger-menu img').alt = this.menuIconAlt
             navContainer.classList.remove('menu-open')
-        }
+        }        
+        
     }
+    
+    
+    
+    render () {
+        const hamburger = document.createElement('div');
+        hamburger.classList.add('hamburger-menu');
 
-    const hamburger = document.createElement('div');
-    hamburger.classList.add('hamburger-menu');
+        const menuIcon = document.createElement('img')
+        menuIcon.src = this.menuOpenIcon
+        menuIcon.alt = this.menuIconAlt
 
-    const menuIcon = document.createElement('img')
-    menuIcon.src = menuOpenIcon
-    menuIcon.alt = menuIconAlt
-
-    hamburger.appendChild(menuIcon)
-
-    hamburger.addEventListener('click', openMenu)
-
-    return hamburger;
+        hamburger.appendChild(menuIcon)
+        hamburger.addEventListener('click', this.openMenu)
+        return hamburger
+    }
 }
+
+export default HamburgerMenu
