@@ -9,16 +9,16 @@ export const Hamburger = (data) => {
             alt: closeIconAlt
         }
     } = data
-    
+
     const menuState = {
         isMenuOpen: false
     }
 
     const openMenu = () => {
         menuState.isMenuOpen = !menuState.isMenuOpen
-        
+
         let navContainer = document.querySelector('.nav-container')
-        if(menuState.isMenuOpen === true) {
+        if (menuState.isMenuOpen === true) {
             menuIcon.src = closeIcon
             menuIcon.alt = closeIconAlt
             navContainer.classList.add('menu-open')
