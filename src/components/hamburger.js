@@ -6,7 +6,6 @@ class Hamburger {
 		this.state = {
 			hamburgerIcon: this.isMenuOpen? props.close.closeIcon : props.menuOpen.menuIcon
 		}
-
 	}
 
 	openMenu = () => {
@@ -32,7 +31,6 @@ class Hamburger {
 		hamburger.appendChild(menuIcon)
 		hamburger.addEventListener('click', this.openMenu)	
 		this.hamburger = hamburger;
-
 		return this.hamburger;
 	}
 }
